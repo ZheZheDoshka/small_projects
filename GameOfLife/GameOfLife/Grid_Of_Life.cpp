@@ -59,11 +59,11 @@ void Grid::render()
 		{
 			if (life[j][i] == 0)
 			{
-				cout << ' ';
+				cout << "[ ]";
 			}
 			else
 			{
-				cout << '@';
+				cout << "[@]";
 			}
 		}
 		cout << endl;
@@ -82,41 +82,57 @@ void Grid::endless_render()
 				if (j + 1 < Y)
 				{
 					if (life[i][j + 1] != 0)
+					{
 						neighbors++;
+					}
 				}
 				if (j - 1 >= 0)
 				{
 					if (life[i][j - 1] != 0)
+					{
 						neighbors++;
+					}
 				}
 				if (i + 1 < X)
 				{
 					if (j + 1 < Y)
 					{
 						if (life[i + 1][j + 1] != 0)
+						{
 							neighbors++;
+						}
 					}
 					if (life[i + 1][j] != 0)
+					{
 						neighbors++;
+					}
 					if (j - 1 >= 0)
 					{
-						if (life[i + 1][j-1] != 0)
+						if (life[i + 1][j - 1] != 0)
+						{
 							neighbors++;
+						}
 					}
 				}
 				if (i -1 >=0)
 				{
 					if (j + 1 < Y)
 					{
-						if (life[i-1][j + 1] != 0)
+						if (life[i - 1][j + 1] != 0)
+						{
 							neighbors++;
+						}
 					}
-					if (life[i-1][j] != 0)
+					if (life[i - 1][j] != 0)
+					{
 						neighbors++;
+					}
 					if (j - 1 >= 0)
 					{
-						if (life[i -1][j - 1] != 0)
+						if (life[i - 1][j - 1] != 0)
+						{
 							neighbors++;
+						}
 					}
 				}
 				if (life[i][j] != 0)
@@ -132,7 +148,7 @@ void Grid::endless_render()
 				}
 				else
 				{
-					if (neighbors = 3)
+					if (neighbors == 3)
 					{
 						temp[i][j] = 1;
 					}
@@ -140,12 +156,13 @@ void Grid::endless_render()
 				neighbors = 0;
 			}
 		}
-		for (int i = 0; i < X; i++)
+		
+	}
+	for (int i = 0; i < X; i++)
+	{
+		for (int j = 0; j < Y; j++)
 		{
-			for (int j = 0; j < Y; j++)
-			{
-				life[i][j] = temp[i][j];
-			}
+			life[i][j] = temp[i][j];
 		}
 	}
 	render();
