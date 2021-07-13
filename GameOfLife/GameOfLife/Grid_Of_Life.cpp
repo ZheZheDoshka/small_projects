@@ -73,6 +73,7 @@ void Grid::render()
 
 void Grid::endless_render()
 {
+	
 	int neighbors=0;
 	{
 		for (int i = 0; i < X; i++)
@@ -165,5 +166,6 @@ void Grid::endless_render()
 			life[i][j] = temp[i][j];
 		}
 	}
+	system("cls");
 	render();
 }

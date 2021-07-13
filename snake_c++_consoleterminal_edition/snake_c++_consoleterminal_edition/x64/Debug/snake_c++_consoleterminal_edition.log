@@ -1,0 +1,4 @@
+﻿  snake.cpp
+N:\lab1\small_projects\snake_c++_consoleterminal_edition\snake_c++_consoleterminal_edition\snake.h(20): warning C4305: инициализация: усечение из "int" в "char"
+N:\lab1\small_projects\snake_c++_consoleterminal_edition\snake_c++_consoleterminal_edition\snake.h(20): warning C4309: инициализация: усечение константного значения
+  snake_c++_consoleterminal_edition.vcxproj -> N:\lab1\small_projects\snake_c++_consoleterminal_edition\x64\Debug\snake_c++_consoleterminal_edition.exe
